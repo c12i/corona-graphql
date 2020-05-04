@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A COVID-19 Graph-QL server. Simply wrapping the public API with Grapg-QL
+> A COVID-19 Graph-QL server. Simply wrapping the public API used in [this project](https://github.com/collinsmuriuki/COVID-19-monitor) with Graph-QL. Why? Well, why not 😅.
 
 ### ✨ [Demo](https://coronagraphql.herokuapp.com/)
 
