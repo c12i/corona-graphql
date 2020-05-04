@@ -28,7 +28,7 @@ const Query = {
     const { data } = await axios.get("https://corona.lmao.ninja/v2/continents");
     if (query) {
       const filteredData = data.filter((p) =>
-        p.toLowerCase().includes(query.toLowerCase())
+        p.continent.toLowerCase().includes(query.toLowerCase())
       );
       return filteredData;
     }
