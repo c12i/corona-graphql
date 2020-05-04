@@ -56,7 +56,7 @@ type Continent {
 type Query {
   worldwideStats: WorldwideCases!
   allCountriesStats(query: String): [Country!]!
-  singleContinent: Continent!
-  allContinentStats: [Continent!]!
-  singleContinentStats: Continent!
+  getSingleCountryCases(country: String!): Country!
+  allContinentStats(query: String): [Continent!]!
+  getSingleContinent(continent: String!): Continent!
 }
