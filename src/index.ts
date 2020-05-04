@@ -2,7 +2,7 @@ import { GraphQLServer, PubSub } from "graphql-yoga";
 
 import { resolvers } from "./resolvers/index";
 
-const PORT: number = 4040 || process.env.PORT;
+const PORT: any = process.env.PORT || 4040;
 const pubsub = new PubSub();
 
 const server = new GraphQLServer({
