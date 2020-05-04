@@ -8,7 +8,7 @@
 
 > A COVID-19 Graph-QL server. Simply wrapping the public API with Grapg-QL
 
-### ✨ [Demo](https://)
+### ✨ [Demo](https://coronagraphql.herokuapp.com/)
 
 ## Install
 
