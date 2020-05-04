@@ -4,20 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node ./src/index.js",
-    "dev": "nodemon ./src/index.js --ext js,ts,graphql --exec babel-node",
+    "start": "tsc && node ./build/index.js",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "collinsmuriuki",
   "license": "MIT",
   "dependencies": {
+    "@types/ws": "^7.2.4",
     "axios": "^0.19.2",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "graphql-yoga": "^1.16.7",
     "randomstring": "^1.1.5",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.8.3",
     "uuid": "^8.0.0"
   },
   "devDependencies": {

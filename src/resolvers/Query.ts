@@ -6,10 +6,10 @@ const Query = {
     return data;
   },
 
-  allCountriesStats: async (root, { query }) => {
+  allCountriesStats: async (_: any, { query }: any) => {
     const { data } = await axios.get("https://corona.lmao.ninja/v2/countries");
     if (query) {
-      const filteredData = data.filter((p) =>
+      const filteredData = data.filter((p: { country: string; }) =>
         p.country.toLowerCase().includes(query.toLowerCase())
       );
       return filteredData;
@@ -17,17 +17,17 @@ const Query = {
     return data;
   },
 
-  getSingleCountryCases: async (root, { country }) => {
+  getSingleCountryCases: async (_: any, { country }: any) => {
     const { data } = await axios.get(
       `https://corona.lmao.ninja/v2/countries/${country.toLowerCase()}`
     );
     return data;
   },
 
-  allContinentStats: async (root, { query }) => {
+  allContinentStats: async (_: any, { query }: any) => {
     const { data } = await axios.get("https://corona.lmao.ninja/v2/continents");
     if (query) {
-      const filteredData = data.filter((p) =>
+      const filteredData = data.filter((p: { continent: string; }) =>
         p.continent.toLowerCase().includes(query.toLowerCase())
       );
       return filteredData;
@@ -35,7 +35,7 @@ const Query = {
     return data;
   },
 
-  getSingleContinent: async (root, { continent }) => {
+  getSingleContinent: async (_: any, { continent }: any) => {
       const { data } = await axios.get(
         `https://corona.lmao.ninja/v2/continents/${continent.toLowerCase()}`
       );
