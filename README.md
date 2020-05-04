@@ -19,7 +19,75 @@ yarn install
 ## Usage
 
 ```sh
-yarn start
+yarn run dev
+```
+
+## Schema
+
+```ts
+type WorldwideCases {
+  updated: Int!
+  cases: Int!
+  todayCases: Int!
+  deaths: Int!
+  todayDeaths: Int!
+  recovered: Int!
+  active: Int!
+  critical: Int!
+  casesPerOneMillion: Int!
+  deathsPerOneMillion: Int!
+  tests: Int!
+  testsPerOneMillion: Int!
+  affectedCountries: Int!
+}
+
+type Country {
+  updated: Int!
+  country: String!
+  countryInfo: CountryInfo!
+  cases: Int!
+  todayCases: Int!
+  deaths: Int!
+  todayDeaths: Int!
+  recovered: Int!
+  active: Int!
+  critical: Int!
+  casesPerOneMillion: Int!
+  deathsPerOneMillion: Int!
+  tests: Int!
+  testsPerOneMillion: Int!
+  continent: String!
+}
+
+type CountryInfo {
+  iso2: String!
+  iso3: String!
+  lat: Float!
+  long: Float!
+  flag: String!
+}
+
+type Continent {
+  updated: Int!
+  cases: Int!
+  todayCases: Int!
+  deaths: Int!
+  todayDeaths: Int!
+  recovered: Int!
+  active: Int!
+  critical: Int!
+  continent: String!
+  countries: [String!]!
+}
+
+type Query {
+  worldwideStats: WorldwideCases!
+  allCountriesStats(query: String): [Country!]!
+  getSingleCountryCases(country: String!): Country!
+  allContinentStats(query: String): [Continent!]!
+  getSingleContinent(continent: String!): Continent!
+}
+
 ```
 
 ## Author
