@@ -17,7 +17,7 @@ const Query = {
     return data;
   },
 
-  getSingleCountryCases: async (_: any, { country }: any) => {
+  getSingleCountryStats: async (_: any, { country }: any) => {
     const { data } = await axios.get(
       `https://corona.lmao.ninja/v2/countries/${country.toLowerCase()}`
     );
