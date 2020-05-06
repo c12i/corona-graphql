@@ -1,5 +1,5 @@
 type WorldwideCases {
-  updated: Int!
+  updated: Float!
   cases: Int!
   todayCases: Int!
   deaths: Int!
@@ -15,7 +15,7 @@ type WorldwideCases {
 }
 
 type Country {
-  updated: Int!
+  updated: Float!
   country: String!
   countryInfo: CountryInfo!
   cases: Int!
@@ -41,7 +41,7 @@ type CountryInfo {
 }
 
 type Continent {
-  updated: Int!
+  updated: Float!
   cases: Int!
   todayCases: Int!
   deaths: Int!
