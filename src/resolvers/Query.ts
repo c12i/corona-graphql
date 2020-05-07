@@ -7,7 +7,7 @@ const Query = {
   },
 
   allCountriesStats: async (_: any, { query }: any) => {
-    const { data } = await axios.get("https://corona.lmao.ninja/v2/countries");
+    const { data } = await axios.get("https://corona.lmao.ninja/v2/countries/?sort=cases");
     if (query) {
       const filteredData = data.filter((p: { country: string; }) =>
         p.country.toLowerCase().includes(query.toLowerCase())
